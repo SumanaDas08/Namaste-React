@@ -1,0 +1,42 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "namaste react by sumana",
+  "keywords": [
+    "react",
+    "namaste",
+    "react",
+    "sumana"
+  ],
+  "homepage": "https://github.com/SumanaDas08/Namaste-React#readme",
+  "bugs": {
+    "url": "https://github.com/SumanaDas08/Namaste-React/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SumanaDas08/Namaste-React.git"
+  },
+  "license": "ISC",
+  "author": "sumana",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.2",
+    "init": "^0.1.2",
+    "npx": "^10.2.2",
+    "parcel": "^2.16.4",
+    "postcss": "^8.5.19",
+    "tailwindcss": "^3.4.19"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.12.0",
+    "@tailwindcss/postcss": "^4.3.2",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-redux": "^9.3.0",
+    "react-router-dom": "^6.30.4"
+  }
+}
