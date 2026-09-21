@@ -2,11 +2,22 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const getItemId = (item) => item?.card?.info?.id;
 
+const getInitialCart = () => {
+  try {
+    const stored = localStorage.getItem("cart");
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      if (parsed && Array.isArray(parsed.items)) return { items: parsed.items };
+    }
+  } catch (err) {
+    console.warn("Could not restore cart:", err.message);
+  }
+  return { items: [] };
+};
+
 const cartSlice = createSlice({
   name: "cart",
-  initialState: {
-    items: [],
-  },
+  initialState: getInitialCart(),
   reducers: {
     addItem: (state, action) => {
       const id = getItemId(action.payload);
